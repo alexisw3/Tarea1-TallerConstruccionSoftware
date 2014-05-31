@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TareaWindow</class>
+ <widget class="QWidget" name="TareaWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>680</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Tarea 1: Base de Datos de Productos</string>
+  </property>
+  <widget class="QTableView" name="table_mark">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>170</y>
+     <width>961</width>
+     <height>471</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="delete_Button">
+   <property name="geometry">
+    <rect>
+     <x>880</x>
+     <y>50</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Eliminar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="edit_Button">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>50</y>
+     <width>121</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Editar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="new_Button">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>50</y>
+     <width>141</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nuevo producto</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="search_name">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>110</y>
+     <width>331</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="statusTip">
+    <string extracomment="Que producto esta buscando?"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>¿Qué producto está buscando?</string>
+   </property>
+   <property name="cursorMoveStyle">
+    <enum>Qt::VisualMoveStyle</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>110</y>
+     <width>161</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Seleccione una marca:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="combo_brands">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>110</y>
+     <width>271</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
