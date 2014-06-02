@@ -9,6 +9,7 @@ from interfaz_Principal import Ui_TareaWindow
 import metodos_Ventana
 
 
+#funciona el editar y nuevo producto creo DX
 class Bd_Productos(QtGui.QWidget):
 
     def __init__(self):
@@ -68,14 +69,38 @@ class Bd_Productos(QtGui.QWidget):
             productos = metodos.obt_ProducXMarca(id_marca)
         self.carga_Productos(productos)
 
+    def ventana_agregaProducto(self):
+        form = metodos_Ventana.Form(self)
+        form.rejected.connect(self.carga_Productos)
+        form.exec_()
+
+
+    def ventana_editaProducto(self):
+        model = self.ui.table_mark.model()
+        index = self.ui.table_mark.currentIndex()
+        if index.row() == -1:
+            self.errorMessageDialog = QtGui.QErrorMessage(self)
+            self.errorMessageDialog.showMessage("Debe seleccionar una fila")
+            return False
+        else:
+            codigo = model.index(index.row(), 0, QtCore.QModelIndex()).data()
+            form = metodos_Ventana.Form(self, codigo)
+            form.rejected.connect(self.carga_Productos)
+            form.exec_()
+
+        self.carga_Productos()
+
 
     def escuchadores(self):
-        self.ui.search_name.returnPressed.connect(self.buscar_Producto)
+        self.ui.new_Button.clicked.connect(self.ventana_agregaProducto)
+        self.ui.edit_Button.clicked.connect(self.ventana_editaProducto)
         self.ui.table_mark.doubleClicked.connect(self.ventana_editaProducto)
-        self.ui.delete_Button.clicked.connect(self.elimina_Producto)
         self.ui.combo_brands.activated[int].connect(
             self.filtra_Produc_Marcas)
 
+
+#falta lo de eliminar
+#lo de text line
 
 
 
