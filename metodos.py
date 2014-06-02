@@ -5,7 +5,7 @@ import sqlite3
 
 
 def connect():
-    con = sqlite3.connect('base_marcas.db')
+    con = sqlite3.connect('base_productos.db')
     con.row_factory = sqlite3.Row
     return con
 
@@ -32,7 +32,7 @@ def obt_ProducXCod(codigo):
     return productos
 
 
-#Falta implementar
+
 def buscar_Producto():
     con = connect()
     c = con.cursor()
@@ -41,6 +41,8 @@ def buscar_Producto():
            marcas m WHERE p.fk_id_marca
            = m.id_marca AND (p.nombre LIKE '%'||?||'%' )"""
 
+    result = c.execute(query, [word])
+    productos = result.fetchall()
     con.close()
     return productos
 
@@ -104,7 +106,19 @@ def editar(entrada, nom, desc, col, prec, marc):
     con.close()
     return salida
 
-#Falta implementar Agregar un nuevo producto
-def agregar_nuevo(n):
+
+def agregar_nuevo(nombre, descripcion, color, precio, fk_id_marca):
     salida = False
+    con = connect()
+    c = con.cursor()
+    values = [nombre, descripcion, color, precio, fk_id_marca]
+    query = "INSERT INTO productos (codigo, nombre, descripcion, color, precio, fk_id_marca) VALUES (NULL,?,?,?,?,?)"
+    try:
+        resultado = c.execute(query, values)
+        con.commit()
+        salida = True
+    except sqlite3.Error as e:
+        salida = False
+        print "Error:", e.args[0]
+    con.close()
     return salida
