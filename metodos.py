@@ -5,7 +5,7 @@ import sqlite3
 
 
 def connect():
-    con = sqlite3.connect('base_productos.db')
+    con = sqlite3.connect('base_marcas.db')
     con.row_factory = sqlite3.Row
     return con
 
@@ -32,7 +32,7 @@ def obt_ProducXCod(codigo):
     return productos
 
 
-#Con este buscamos en el Line text WIII era este!
+#Falta implementar
 def buscar_Producto(word):
     con = connect()
     c = con.cursor()
@@ -41,8 +41,6 @@ def buscar_Producto(word):
            marcas m WHERE p.fk_id_marca
            = m.id_marca AND (p.nombre LIKE '%'||?||'%' )"""
 
-    result = c.execute(query, [word])
-    productos = result.fetchall()
     con.close()
     return productos
 
@@ -50,7 +48,6 @@ def buscar_Producto(word):
 def obtener_Marcas():
     con = connect()
     c = con.cursor()
-    #se seleccionan las id de la tabla marcas
     query = """SELECT id_marca, nombre FROM marcas"""
     result = c.execute(query)
     marcas = result.fetchall()
@@ -64,22 +61,28 @@ def obt_ProducXMarca(id_marca):
     query = """SELECT p.codigo, p.nombre, p.descripcion, p.color,
              p.precio, m.nombre as 'marca'FROM productos p,
              marcas m WHERE p.fk_id_marca = m.id_marca AND p.fk_id_marca = ?"""
-
     result = c.execute(query, [id_marca])
     productos = result.fetchall()
     con.close()
     return productos
 
 
-#Falta metodo eliminar REVISAR
 def eliminar(codigo):
     salida = False
     con = connect()
     c = con.cursor()
-    #query = "DELETE FROM productos WHERE codigo = ?"
+    query = "DELETE FROM productos WHERE codigo = ?"
+    try:
+        resultado = c.execute(query, [codigo])
+        con.commit()
+        salida = True
+    except sqlite3.Error as e:
+        salida = False
+        print "Error:", e.args[0]
+    con.close()
     return salida
 
-#Falta metodo EDITAR
+
 def editar(entrada, nom, desc, col, prec, marc):
     salida = False
     con = connect()
@@ -89,22 +92,19 @@ def editar(entrada, nom, desc, col, prec, marc):
     col = col
     prec = prec
     marc = marc
-    query = """UPDATE productos SET nombre= ?,descripcion = ?, color = ?, precio = ?, fk_id_marca = ? WHERE codigo = ?"""
-    return salida
-
-
-def agregar_nuevo(nombre, descripcion, color, precio, fk_id_marca):
-    salida = False
-    con = connect()
-    c = con.cursor()
-    values = [nombre, descripcion, color, precio, fk_id_marca]
-    query = "INSERT INTO productos (codigo, nombre,descripcion, color, precio, fk_id_marca) VALUES (NULL,?,?,?,?,?)"
+    query = """UPDATE productos SET nombre= ?,
+     descripcion = ?, color = ?, precio = ?, fk_id_marca = ? WHERE codigo = ?"""
     try:
-        resultado = c.execute(query, values)
+        resultado = c.execute(query, [nom, desc, col, prec, marc, entrada])
         con.commit()
         salida = True
     except sqlite3.Error as e:
         salida = False
         print "Error:", e.args[0]
     con.close()
+    return salida
+
+#Falta implementar Agregar un nuevo producto
+def agregar_nuevo(n):
+    salida = False
     return salida
