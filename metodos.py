@@ -4,54 +4,107 @@
 import sqlite3
 
 
-#se realiza la coneccion a la base de datos
 def connect():
-    con = sqlite3.connect('base_marcas.db')
+    con = sqlite3.connect('base_productos.db')
     con.row_factory = sqlite3.Row
     return con
 
 
-
 def obtener_Productos():
+    con = connect()
+    c = con.cursor()
+    query = """SELECT p.codigo, p.nombre, p.descripcion, p.color, p.precio,
+             m.nombre as 'marca'FROM productos p,
+              marcas m WHERE p.fk_id_marca = m.id_marca"""
+    result = c.execute(query)
+    productos = result.fetchall()
+    con.close()
+    return productos
 
+
+def obt_ProducXCod(codigo):
+    con = connect()
+    c = con.cursor()
+    query = "SELECT * FROM productos WHERE codigo = ?"
+    result = c.execute(query, [codigo])
+    productos = result.fetchone()
+    con.close()
+    return productos
+
+
+#Con este buscamos en el Line text WIII era este!
+def buscar_Producto(word):
+    con = connect()
+    c = con.cursor()
+    query = """SELECT p.codigo, p.nombre, p.descripcion,
+            p.color, p.precio, m.nombre as 'marca'FROM productos p,
+           marcas m WHERE p.fk_id_marca
+           = m.id_marca AND (p.nombre LIKE '%'||?||'%' )"""
+
+    result = c.execute(query, [word])
+    productos = result.fetchall()
+    con.close()
     return productos
 
 
 def obtener_Marcas():
-
+    con = connect()
+    c = con.cursor()
+    #se seleccionan las id de la tabla marcas
+    query = """SELECT id_marca, nombre FROM marcas"""
+    result = c.execute(query)
+    marcas = result.fetchall()
+    con.close()
     return marcas
 
 
-
-def obt_ProducXCod(codigo):
-
-    return productos
-
-
-
 def obt_ProducXMarca(id_marca):
+    con = connect()
+    c = con.cursor()
+    query = """SELECT p.codigo, p.nombre, p.descripcion, p.color,
+             p.precio, m.nombre as 'marca'FROM productos p,
+             marcas m WHERE p.fk_id_marca = m.id_marca AND p.fk_id_marca = ?"""
 
+    result = c.execute(query, [id_marca])
+    productos = result.fetchall()
+    con.close()
     return productos
 
 
-
-def buscar_Producto(word):
-
-    return productos
-
+#Falta metodo eliminar REVISAR
 def eliminar(codigo):
     salida = False
-
+    con = connect()
+    c = con.cursor()
+    #query = "DELETE FROM productos WHERE codigo = ?"
     return salida
 
-
+#Falta metodo EDITAR
 def editar(entrada, nom, desc, col, prec, marc):
     salida = False
-
+    con = connect()
+    c = con.cursor()
+    nom = nom
+    desc = desc
+    col = col
+    prec = prec
+    marc = marc
+    query = """UPDATE productos SET nombre= ?,descripcion = ?, color = ?, precio = ?, fk_id_marca = ? WHERE codigo = ?"""
     return salida
 
-#agrega un nuevo producto, con todos los parametros necesarios
+
 def agregar_nuevo(nombre, descripcion, color, precio, fk_id_marca):
     salida = False
-
+    con = connect()
+    c = con.cursor()
+    values = [nombre, descripcion, color, precio, fk_id_marca]
+    query = "INSERT INTO productos (codigo, nombre,descripcion, color, precio, fk_id_marca) VALUES (NULL,?,?,?,?,?)"
+    try:
+        resultado = c.execute(query, values)
+        con.commit()
+        salida = True
+    except sqlite3.Error as e:
+        salida = False
+        print "Error:", e.args[0]
+    con.close()
     return salida
