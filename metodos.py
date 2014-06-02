@@ -5,7 +5,7 @@ import sqlite3
 
 
 def connect():
-    con = sqlite3.connect('base_marcas.db')
+    con = sqlite3.connect('base_productos.db')
     con.row_factory = sqlite3.Row
     return con
 
