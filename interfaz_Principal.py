@@ -16,6 +16,7 @@ class Ui_TareaWindow(object):
         self.table_mark = QtGui.QTableView(TareaWindow)
         self.table_mark.setGeometry(QtCore.QRect(30, 170, 961, 471))
         self.table_mark.setObjectName("table_mark")
+        self.table_mark.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
         self.delete_Button = QtGui.QPushButton(TareaWindow)
         self.delete_Button.setGeometry(QtCore.QRect(880, 50, 111, 27))
         self.delete_Button.setObjectName("delete_Button")
