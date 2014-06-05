@@ -33,7 +33,7 @@ def obt_ProducXCod(codigo):
 
 
 
-def buscar_Producto():
+def buscar_Producto(word):
     con = connect()
     c = con.cursor()
     query = """SELECT p.codigo, p.nombre, p.descripcion,
