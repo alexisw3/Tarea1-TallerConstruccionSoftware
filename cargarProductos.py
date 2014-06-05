@@ -10,6 +10,8 @@ import metodos_Ventana
 
 
 #funciona el editar y nuevo producto creo DX
+# falta solo arreglar lo de el agregar el producto no se como quiere el profe
+
 class Bd_Productos(QtGui.QWidget):
 
     def __init__(self):
@@ -19,6 +21,7 @@ class Bd_Productos(QtGui.QWidget):
         self.show()
         self.carga_Productos()
         self.escuchadores()
+        self.carga_Marcas() #te falta solo llamarlo para que funcionara
 
 # aqui se hace la magia de la grilla y aparecen en pantalla
     def carga_Productos(self, productos=None):
@@ -27,7 +30,8 @@ class Bd_Productos(QtGui.QWidget):
         self.model = QtGui.QStandardItemModel(len(productos), 6)
         self.model.setHorizontalHeaderItem(0, QtGui.QStandardItem(u"Id"))
         self.model.setHorizontalHeaderItem(1, QtGui.QStandardItem(u"Nombre"))
-        self.model.setHorizontalHeaderItem(2, QtGui.QStandardItem(u"Descripción"))
+        self.model.setHorizontalHeaderItem(2, QtGui.QStandardItem(
+            u"Descripción"))
         self.model.setHorizontalHeaderItem(3, QtGui.QStandardItem(u"Color"))
         self.model.setHorizontalHeaderItem(4, QtGui.QStandardItem(u"Precio"))
         self.model.setHorizontalHeaderItem(5, QtGui.QStandardItem(u"Marca"))
@@ -69,11 +73,15 @@ class Bd_Productos(QtGui.QWidget):
             productos = metodos.obt_ProducXMarca(id_marca)
         self.carga_Productos(productos)
 
+    def carga_buscarProducto(self):
+        word = self.ui.search_name.text()
+        productos = metodos.buscar_Producto(word)
+        self.carga_Productos(productos)
+
     def ventana_agregaProducto(self):
         form = metodos_Ventana.Form(self)
         form.rejected.connect(self.carga_Productos)
         form.exec_()
-
 
     def ventana_editaProducto(self):
         model = self.ui.table_mark.model()
@@ -87,9 +95,40 @@ class Bd_Productos(QtGui.QWidget):
             form = metodos_Ventana.Form(self, codigo)
             form.rejected.connect(self.carga_Productos)
             form.exec_()
-
         self.carga_Productos()
 
+    def elimina_Producto(self):
+        model = self.ui.table_mark.model()
+        index = self.ui.table_mark.currentIndex()
+        if index.row() == -1:
+            self.errorMessageDialog = QtGui.QErrorMessage(self)
+            self.errorMessageDialog.showMessage("Debe seleccionar una fila")
+            return False
+        else:
+            codigo = model.index(index.row(), 0, QtCore.QModelIndex()).data()
+            self.ui.msgBox = QtGui.QMessageBox()
+            self.ui.msgBox.setWindowTitle(" Advertencia ")
+            self.ui.msgBox.setText(
+                "Usted esta a punto de borra un producto de la base de datos.")
+            self.ui.msgBox.setInformativeText(
+                               "Esta seguro de querer eliminar el producto?")
+            self.ui.msgBox.setStandardButtons(
+                QtGui.QMessageBox.Ok | QtGui.QMessageBox.Cancel)
+            self.ui.msgBox.setDefaultButton(QtGui.QMessageBox.Ok)
+            ret = self.ui.msgBox.exec_()
+            if ret == QtGui.QMessageBox.Ok:
+                if (metodos.eliminar(codigo)):
+                    self.carga_Productos()
+                    msgBox = QtGui.QMessageBox()
+                    msgBox.setWindowTitle("Eliminando")
+                    msgBox.setText("El producto fue eliminado.")
+                    msgBox.exec_()
+                    return True
+                else:
+                    self.ui.errorMessageDialog = QtGui.QErrorMessage(self)
+                    self.ui.errorMessageDialog.showMessage(
+                        "Error al eliminar el registro")
+                    return False
 
     def escuchadores(self):
         self.ui.new_Button.clicked.connect(self.ventana_agregaProducto)
@@ -97,12 +136,8 @@ class Bd_Productos(QtGui.QWidget):
         self.ui.table_mark.doubleClicked.connect(self.ventana_editaProducto)
         self.ui.combo_brands.activated[int].connect(
             self.filtra_Produc_Marcas)
-
-
-#falta lo de eliminar
-#lo de text line
-
-
+        self.ui.search_name.returnPressed.connect(self.carga_buscarProducto)
+        self.ui.delete_Button.clicked.connect(self.elimina_Producto)
 
 def run():
     app = QtGui.QApplication(sys.argv)
