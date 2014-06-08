@@ -6,8 +6,8 @@ import sys
 import carga_Productos
 import metodos_login
 
+#clase para ver ventana de login
 class Login(QtGui.QWidget):
-
     def __init__(self):
         super(Login, self).__init__()
         self.ui = Ui_Form()
@@ -15,15 +15,17 @@ class Login(QtGui.QWidget):
         self.escuchador()
         self.show()
 
+#respuestas al hacer click sobre los botones
     def escuchador(self):
         self.ui.user_in.clicked.connect(self.aceptado)
         self.ui.user_out.clicked.connect(self.cerrar)
 
-
+#mostrar ventana principal
     def ventana_principal(self):
         form = carga_Productos.Bd_Productos()
         form.exec_()
 
+#funcion para verificar identidad del usuario
     def aceptado(self):
         clave = self.ui.line_pass.text()
         usuario = self.ui.line_user.text()

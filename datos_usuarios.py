@@ -2,7 +2,7 @@
 
 import sqlite3
 
-conn = sqlite3.connect('base_usuarios.db')
+conn = sqlite3.connect('base_usuarios.db')#creo base de datos de los usuarios permitidos
 c = conn.cursor()
 
 #creo tabla usuarios

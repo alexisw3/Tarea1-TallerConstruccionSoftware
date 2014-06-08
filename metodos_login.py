@@ -2,12 +2,14 @@
 
 import sqlite3
 
-def connect():
+
+def connect():#conecto con la base de datos de los usuarios
     con = sqlite3.connect('base_usuarios.db')
     con.row_factory = sqlite3.Row
     return con
 
-def obtener_usuarios():
+
+def obtener_usuarios():#obtengo todos los usuarios
     con = connect()
     c = con.cursor()
     query = """SELECT * FROM usuarios"""
@@ -16,7 +18,8 @@ def obtener_usuarios():
     con.close()
     return usuarios
 
-def obt_clave(usuario):
+
+def obt_clave(usuario):# obtengo la clave de acuerdo a cierto usuario
     con = connect()
     c = con.cursor()
     query = "SELECT password FROM usuarios WHERE user = ?"
@@ -25,7 +28,7 @@ def obt_clave(usuario):
     con.close()
     return clave
 
-def obt_usuario(clave):
+def obt_usuario(clave):# obtengo el usuario de a acuerdo a la clave
     con = connect()
     c = con.cursor()
     query = "SELECT user FROM usuarios WHERE password = ?"
@@ -36,7 +39,7 @@ def obt_usuario(clave):
 
 
 
-if __name__ == "__main__":
-    usuarios = obt_usuario("pajarito1")
-    for usuario in usuarios:
-        print usuarios["user"]
+#if __name__ == "__main__":
+#    usuarios = obt_usuario("pajarito1")
+#    for usuario in usuarios:
+#        print usuarios["user"]

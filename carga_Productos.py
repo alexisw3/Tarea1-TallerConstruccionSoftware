@@ -8,12 +8,7 @@ import metodos
 from interfaz_Principal import Ui_TareaWindow
 import metodos_Ventana
 
-
-#funciona el editar y nuevo producto creo DX
-# falta solo arreglar lo de el agregar el producto no se como quiere el profe
-
 class Bd_Productos(QtGui.QWidget):
-
     def __init__(self):
         super(Bd_Productos, self).__init__()
         self.ui = Ui_TareaWindow()
@@ -21,9 +16,9 @@ class Bd_Productos(QtGui.QWidget):
         self.show()
         self.carga_Productos()
         self.escuchadores()
-        self.carga_Marcas() #te falta solo llamarlo para que funcionara
+        self.carga_Marcas()
 
-# aqui se hace la magia de la grilla y aparecen en pantalla
+#carga los productos en la tabla
     def carga_Productos(self, productos=None):
         if productos is None:
             productos = metodos.obtener_Productos()
@@ -58,12 +53,14 @@ class Bd_Productos(QtGui.QWidget):
         self.ui.table_mark.setColumnWidth(4, 150)
         self.ui.table_mark.setColumnWidth(5, 150)
 
+#carga las marcas de los productos
     def carga_Marcas(self):
         marcas = metodos.obtener_Marcas()
         self.ui.combo_brands.addItem("Todos", -1)
         for marca in marcas:
             self.ui.combo_brands.addItem(marca["nombre"], marca["id_marca"])
 
+#obtenemos los productos por marcas
     def filtra_Produc_Marcas(self, index):
         id_marca = self.ui.combo_brands.itemData(
             self.ui.combo_brands.currentIndex())
@@ -73,16 +70,19 @@ class Bd_Productos(QtGui.QWidget):
             productos = metodos.obt_ProducXMarca(id_marca)
         self.carga_Productos(productos)
 
+#cargamos el metodo del archivo metodos para buscar un producto
     def carga_buscarProducto(self):
         word = self.ui.search_name.text()
         productos = metodos.buscar_Producto(word)
         self.carga_Productos(productos)
 
+#muestra la ventana de agregar producto
     def ventana_agregaProducto(self):
         form = metodos_Ventana.Form(self)
         form.rejected.connect(self.carga_Productos)
         form.exec_()
 
+#muestra la ventana para editar producto
     def ventana_editaProducto(self):
         model = self.ui.table_mark.model()
         index = self.ui.table_mark.currentIndex()
@@ -97,6 +97,7 @@ class Bd_Productos(QtGui.QWidget):
             form.exec_()
         self.carga_Productos()
 
+#funcion para eliminar un producto en especifico
     def elimina_Producto(self):
         model = self.ui.table_mark.model()
         index = self.ui.table_mark.currentIndex()
@@ -130,6 +131,7 @@ class Bd_Productos(QtGui.QWidget):
                         "Error al eliminar el registro")
                     return False
 
+#respuestas a cada accion del usuario
     def escuchadores(self):
         self.ui.new_Button.clicked.connect(self.ventana_agregaProducto)
         self.ui.edit_Button.clicked.connect(self.ventana_editaProducto)
