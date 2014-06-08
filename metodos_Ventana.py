@@ -25,6 +25,7 @@ class Form(QtGui.QDialog):
             string_fk_id_marca = str(datos_productos["fk_id_marca"])
             self.ui.fk_line.setText(string_fk_id_marca)
             self.ui.ok_Button.clicked.connect(self.editar)
+            self.agrega_foto()
 
 
     def agregar(self):
@@ -57,3 +58,9 @@ class Form(QtGui.QDialog):
 
     def cancel(self):
         self.reject()
+
+    def agrega_foto(self):
+        nombre_producto = self.ui.nombre_line.text()
+        label_imagen = self.ui.label_6
+        label_imagen.setPixmap(nombre_producto)
+

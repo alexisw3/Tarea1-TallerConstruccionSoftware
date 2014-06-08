@@ -2,17 +2,18 @@
 
 # Form implementation generated from reading ui file 'ventana_Producto.ui'
 #
-# Created: Sat May 31 19:17:01 2014
+# Created: Mon Jun  2 11:13:50 2014
 #      by: pyside-uic 0.2.14 running on PySide 1.1.2
 #
 # WARNING! All changes made in this file will be lost!
 
 from PySide import QtCore, QtGui
 
+
 class Ui_newWindow(object):
     def setupUi(self, newWindow):
         newWindow.setObjectName("newWindow")
-        newWindow.resize(411, 240)
+        newWindow.resize(411, 540)
         self.ok_Button = QtGui.QPushButton(newWindow)
         self.ok_Button.setGeometry(QtCore.QRect(150, 200, 98, 27))
         self.ok_Button.setObjectName("ok_Button")
@@ -46,21 +47,36 @@ class Ui_newWindow(object):
         self.label_5 = QtGui.QLabel(newWindow)
         self.label_5.setGeometry(QtCore.QRect(30, 150, 131, 20))
         self.label_5.setObjectName("label_5")
-
+        self.label_6 = QtGui.QLabel(newWindow)
+        self.label_6.setGeometry(QtCore.QRect(57, 240, 300, 300))
         self.retranslateUi(newWindow)
         QtCore.QMetaObject.connectSlotsByName(newWindow)
 
+
+
     def retranslateUi(self, newWindow):
-        newWindow.setWindowTitle(QtGui.QApplication.translate("newWindow", "Nuevo producto", None, QtGui.QApplication.UnicodeUTF8))
-        self.ok_Button.setText(QtGui.QApplication.translate("newWindow", "Aceptar", None, QtGui.QApplication.UnicodeUTF8))
-        self.nombre_line.setPlaceholderText(QtGui.QApplication.translate("newWindow", "Ej: zapatilla", None, QtGui.QApplication.UnicodeUTF8))
-        self.descripcion_line.setPlaceholderText(QtGui.QApplication.translate("newWindow", "Ej: calzado", None, QtGui.QApplication.UnicodeUTF8))
-        self.color_line.setPlaceholderText(QtGui.QApplication.translate("newWindow", "Ej: blancas", None, QtGui.QApplication.UnicodeUTF8))
-        self.precio_line.setPlaceholderText(QtGui.QApplication.translate("newWindow", "Ej: 20000", None, QtGui.QApplication.UnicodeUTF8))
-        self.fk_line.setPlaceholderText(QtGui.QApplication.translate("newWindow", "Ej: Nike", None, QtGui.QApplication.UnicodeUTF8))
-        self.label.setText(QtGui.QApplication.translate("newWindow", "Nombre Producto:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_2.setText(QtGui.QApplication.translate("newWindow", "Descripcion:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_3.setText(QtGui.QApplication.translate("newWindow", "Color:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_4.setText(QtGui.QApplication.translate("newWindow", "Precio:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_5.setText(QtGui.QApplication.translate("newWindow", "Marca:", None, QtGui.QApplication.UnicodeUTF8))
+        newWindow.setWindowTitle(QtGui.QApplication.translate(
+            "newWindow", "Nuevo producto", None, QtGui.QApplication.UnicodeUTF8))
+        self.ok_Button.setText(QtGui.QApplication.translate(
+            "newWindow", "Aceptar", None, QtGui.QApplication.UnicodeUTF8))
+        self.nombre_line.setPlaceholderText(QtGui.QApplication.translate(
+            "newWindow", "Ej: zapatilla", None, QtGui.QApplication.UnicodeUTF8))
+        self.descripcion_line.setPlaceholderText(QtGui.QApplication.translate(
+            "newWindow", "Ej: calzado", None, QtGui.QApplication.UnicodeUTF8))
+        self.color_line.setPlaceholderText(QtGui.QApplication.translate(
+            "newWindow", "Ej: blancas", None, QtGui.QApplication.UnicodeUTF8))
+        self.precio_line.setPlaceholderText(QtGui.QApplication.translate(
+            "newWindow", "Ej: 20000", None, QtGui.QApplication.UnicodeUTF8))
+        self.fk_line.setPlaceholderText(QtGui.QApplication.translate(
+            "newWindow", "Ej: Nike", None, QtGui.QApplication.UnicodeUTF8))
+        self.label.setText(QtGui.QApplication.translate(
+            "newWindow", "Nombre Producto:", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_2.setText(QtGui.QApplication.translate(
+            "newWindow", "Descripcion:", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_3.setText(QtGui.QApplication.translate(
+            "newWindow", "Color:", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_4.setText(QtGui.QApplication.translate(
+            "newWindow", "Precio:", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_5.setText(QtGui.QApplication.translate(
+            "newWindow", "Marca:", None, QtGui.QApplication.UnicodeUTF8))
 
