@@ -1,0 +1,748 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module cargaProductos</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>cargaProductos</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/richi/Escritorio/Tarea1-TallerConstruccionSoftware/cargaProductos.py">/home/richi/Escritorio/Tarea1-TallerConstruccionSoftware/cargaProductos.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;-*-&nbsp;coding:&nbsp;utf-8&nbsp;-*-</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="PySide.QtCore.html">PySide.QtCore</a><br>
+<a href="PySide.QtGui.html">PySide.QtGui</a><br>
+</td><td width="25%" valign=top><a href="metodos.html">metodos</a><br>
+<a href="metodos_Ventana.html">metodos_Ventana</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="PySide.QtGui.html#QWidget">PySide.QtGui.QWidget</a>(<a href="PySide.QtCore.html#QObject">PySide.QtCore.QObject</a>, <a href="PySide.QtGui.html#QPaintDevice">PySide.QtGui.QPaintDevice</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="cargaProductos.html#Bd_Productos">Bd_Productos</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Bd_Productos">class <strong>Bd_Productos</strong></a>(<a href="PySide.QtGui.html#QWidget">PySide.QtGui.QWidget</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#funciona&nbsp;el&nbsp;editar&nbsp;y&nbsp;nuevo&nbsp;producto&nbsp;creo&nbsp;DX<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="cargaProductos.html#Bd_Productos">Bd_Productos</a></dd>
+<dd><a href="PySide.QtGui.html#QWidget">PySide.QtGui.QWidget</a></dd>
+<dd><a href="PySide.QtCore.html#QObject">PySide.QtCore.QObject</a></dd>
+<dd><a href="PySide.QtGui.html#QPaintDevice">PySide.QtGui.QPaintDevice</a></dd>
+<dd>Shiboken.Object</dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Bd_Productos-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-carga_Marcas"><strong>carga_Marcas</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-carga_Productos"><strong>carga_Productos</strong></a>(self, productos<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-carga_buscarProducto"><strong>carga_buscarProducto</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-elimina_Producto"><strong>elimina_Producto</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-escuchadores"><strong>escuchadores</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-filtra_Produc_Marcas"><strong>filtra_Produc_Marcas</strong></a>(self, index)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-ventana_agregaProducto"><strong>ventana_agregaProducto</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-ventana_editaProducto"><strong>ventana_editaProducto</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>staticMetaObject</strong> = &lt;PySide.QtCore.QMetaObject object&gt;</dl>
+
+<hr>
+Methods inherited from <a href="PySide.QtGui.html#QWidget">PySide.QtGui.QWidget</a>:<br>
+<dl><dt><a name="Bd_Productos-acceptDrops"><strong>acceptDrops</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-accessibleDescription"><strong>accessibleDescription</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-accessibleName"><strong>accessibleName</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-actionEvent"><strong>actionEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-actions"><strong>actions</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-activateWindow"><strong>activateWindow</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-addAction"><strong>addAction</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-addActions"><strong>addActions</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-adjustSize"><strong>adjustSize</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-autoFillBackground"><strong>autoFillBackground</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-backgroundRole"><strong>backgroundRole</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-baseSize"><strong>baseSize</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-changeEvent"><strong>changeEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-childAt"><strong>childAt</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-childrenRect"><strong>childrenRect</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-childrenRegion"><strong>childrenRegion</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-clearFocus"><strong>clearFocus</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-clearMask"><strong>clearMask</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-close"><strong>close</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-closeEvent"><strong>closeEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-contentsMargins"><strong>contentsMargins</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-contentsRect"><strong>contentsRect</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-contextMenuEvent"><strong>contextMenuEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-contextMenuPolicy"><strong>contextMenuPolicy</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-createWinId"><strong>createWinId</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-cursor"><strong>cursor</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-destroy"><strong>destroy</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-devType"><strong>devType</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-dragEnterEvent"><strong>dragEnterEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-dragLeaveEvent"><strong>dragLeaveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-dragMoveEvent"><strong>dragMoveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-dropEvent"><strong>dropEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-effectiveWinId"><strong>effectiveWinId</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-ensurePolished"><strong>ensurePolished</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-enterEvent"><strong>enterEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-event"><strong>event</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-focusInEvent"><strong>focusInEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-focusNextChild"><strong>focusNextChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-focusNextPrevChild"><strong>focusNextPrevChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-focusOutEvent"><strong>focusOutEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-focusPolicy"><strong>focusPolicy</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-focusPreviousChild"><strong>focusPreviousChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-focusProxy"><strong>focusProxy</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-focusWidget"><strong>focusWidget</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-font"><strong>font</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-fontInfo"><strong>fontInfo</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-fontMetrics"><strong>fontMetrics</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-foregroundRole"><strong>foregroundRole</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-frameGeometry"><strong>frameGeometry</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-frameSize"><strong>frameSize</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-geometry"><strong>geometry</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-getContentsMargins"><strong>getContentsMargins</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-grabGesture"><strong>grabGesture</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-grabKeyboard"><strong>grabKeyboard</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-grabMouse"><strong>grabMouse</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-grabShortcut"><strong>grabShortcut</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-graphicsEffect"><strong>graphicsEffect</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-graphicsProxyWidget"><strong>graphicsProxyWidget</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-hasFocus"><strong>hasFocus</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-hasMouseTracking"><strong>hasMouseTracking</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-height"><strong>height</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-heightForWidth"><strong>heightForWidth</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-hide"><strong>hide</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-hideEvent"><strong>hideEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-inputContext"><strong>inputContext</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-inputMethodEvent"><strong>inputMethodEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-inputMethodHints"><strong>inputMethodHints</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-inputMethodQuery"><strong>inputMethodQuery</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-insertAction"><strong>insertAction</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-insertActions"><strong>insertActions</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-isActiveWindow"><strong>isActiveWindow</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-isAncestorOf"><strong>isAncestorOf</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-isEnabled"><strong>isEnabled</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-isEnabledTo"><strong>isEnabledTo</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-isFullScreen"><strong>isFullScreen</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-isHidden"><strong>isHidden</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-isLeftToRight"><strong>isLeftToRight</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-isMaximized"><strong>isMaximized</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-isMinimized"><strong>isMinimized</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-isModal"><strong>isModal</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-isRightToLeft"><strong>isRightToLeft</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-isVisible"><strong>isVisible</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-isVisibleTo"><strong>isVisibleTo</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-isWindow"><strong>isWindow</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-isWindowModified"><strong>isWindowModified</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-keyPressEvent"><strong>keyPressEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-keyReleaseEvent"><strong>keyReleaseEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-languageChange"><strong>languageChange</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-layout"><strong>layout</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-layoutDirection"><strong>layoutDirection</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-leaveEvent"><strong>leaveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-locale"><strong>locale</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-lower"><strong>lower</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-mapFrom"><strong>mapFrom</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-mapFromGlobal"><strong>mapFromGlobal</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-mapFromParent"><strong>mapFromParent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-mapTo"><strong>mapTo</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-mapToGlobal"><strong>mapToGlobal</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-mapToParent"><strong>mapToParent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-mask"><strong>mask</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-maximumHeight"><strong>maximumHeight</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-maximumSize"><strong>maximumSize</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-maximumWidth"><strong>maximumWidth</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-metric"><strong>metric</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-minimumHeight"><strong>minimumHeight</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-minimumSize"><strong>minimumSize</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-minimumSizeHint"><strong>minimumSizeHint</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-minimumWidth"><strong>minimumWidth</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-mouseDoubleClickEvent"><strong>mouseDoubleClickEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-mouseMoveEvent"><strong>mouseMoveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-mousePressEvent"><strong>mousePressEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-mouseReleaseEvent"><strong>mouseReleaseEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-move"><strong>move</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-moveEvent"><strong>moveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-nativeParentWidget"><strong>nativeParentWidget</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-nextInFocusChain"><strong>nextInFocusChain</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-normalGeometry"><strong>normalGeometry</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-overrideWindowFlags"><strong>overrideWindowFlags</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-overrideWindowState"><strong>overrideWindowState</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-paintEngine"><strong>paintEngine</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-paintEvent"><strong>paintEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-palette"><strong>palette</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-parentWidget"><strong>parentWidget</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-pos"><strong>pos</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-previousInFocusChain"><strong>previousInFocusChain</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-raise_"><strong>raise_</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-rect"><strong>rect</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-releaseKeyboard"><strong>releaseKeyboard</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-releaseMouse"><strong>releaseMouse</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-releaseShortcut"><strong>releaseShortcut</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-removeAction"><strong>removeAction</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-render"><strong>render</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-repaint"><strong>repaint</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-resetInputContext"><strong>resetInputContext</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-resize"><strong>resize</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-resizeEvent"><strong>resizeEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-restoreGeometry"><strong>restoreGeometry</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-saveGeometry"><strong>saveGeometry</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-scroll"><strong>scroll</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setAcceptDrops"><strong>setAcceptDrops</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setAccessibleDescription"><strong>setAccessibleDescription</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setAccessibleName"><strong>setAccessibleName</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setAttribute"><strong>setAttribute</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setAutoFillBackground"><strong>setAutoFillBackground</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setBackgroundRole"><strong>setBackgroundRole</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setBaseSize"><strong>setBaseSize</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setContentsMargins"><strong>setContentsMargins</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setContextMenuPolicy"><strong>setContextMenuPolicy</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setCursor"><strong>setCursor</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setDisabled"><strong>setDisabled</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setEnabled"><strong>setEnabled</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setFixedHeight"><strong>setFixedHeight</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setFixedSize"><strong>setFixedSize</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setFixedWidth"><strong>setFixedWidth</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setFocus"><strong>setFocus</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setFocusPolicy"><strong>setFocusPolicy</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setFocusProxy"><strong>setFocusProxy</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setFont"><strong>setFont</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setForegroundRole"><strong>setForegroundRole</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setGeometry"><strong>setGeometry</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setGraphicsEffect"><strong>setGraphicsEffect</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setHidden"><strong>setHidden</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setInputContext"><strong>setInputContext</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setInputMethodHints"><strong>setInputMethodHints</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setLayout"><strong>setLayout</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setLayoutDirection"><strong>setLayoutDirection</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setLocale"><strong>setLocale</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setMask"><strong>setMask</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setMaximumHeight"><strong>setMaximumHeight</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setMaximumSize"><strong>setMaximumSize</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setMaximumWidth"><strong>setMaximumWidth</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setMinimumHeight"><strong>setMinimumHeight</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setMinimumSize"><strong>setMinimumSize</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setMinimumWidth"><strong>setMinimumWidth</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setMouseTracking"><strong>setMouseTracking</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setPalette"><strong>setPalette</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setParent"><strong>setParent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setShortcutAutoRepeat"><strong>setShortcutAutoRepeat</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setShortcutEnabled"><strong>setShortcutEnabled</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setSizeIncrement"><strong>setSizeIncrement</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setSizePolicy"><strong>setSizePolicy</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setStatusTip"><strong>setStatusTip</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setStyle"><strong>setStyle</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setStyleSheet"><strong>setStyleSheet</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setToolTip"><strong>setToolTip</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setUpdatesEnabled"><strong>setUpdatesEnabled</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setVisible"><strong>setVisible</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setWhatsThis"><strong>setWhatsThis</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setWindowFilePath"><strong>setWindowFilePath</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setWindowFlags"><strong>setWindowFlags</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setWindowIcon"><strong>setWindowIcon</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setWindowIconText"><strong>setWindowIconText</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setWindowModality"><strong>setWindowModality</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setWindowModified"><strong>setWindowModified</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setWindowOpacity"><strong>setWindowOpacity</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setWindowRole"><strong>setWindowRole</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setWindowState"><strong>setWindowState</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setWindowTitle"><strong>setWindowTitle</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-show"><strong>show</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-showEvent"><strong>showEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-showFullScreen"><strong>showFullScreen</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-showMaximized"><strong>showMaximized</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-showMinimized"><strong>showMinimized</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-showNormal"><strong>showNormal</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-size"><strong>size</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-sizeHint"><strong>sizeHint</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-sizeIncrement"><strong>sizeIncrement</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-sizePolicy"><strong>sizePolicy</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-stackUnder"><strong>stackUnder</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-statusTip"><strong>statusTip</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-style"><strong>style</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-styleSheet"><strong>styleSheet</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-tabletEvent"><strong>tabletEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-testAttribute"><strong>testAttribute</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-toolTip"><strong>toolTip</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-underMouse"><strong>underMouse</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-ungrabGesture"><strong>ungrabGesture</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-unsetCursor"><strong>unsetCursor</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-unsetLayoutDirection"><strong>unsetLayoutDirection</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-unsetLocale"><strong>unsetLocale</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-update"><strong>update</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-updateGeometry"><strong>updateGeometry</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-updateMicroFocus"><strong>updateMicroFocus</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-updatesEnabled"><strong>updatesEnabled</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-visibleRegion"><strong>visibleRegion</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-whatsThis"><strong>whatsThis</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-wheelEvent"><strong>wheelEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-width"><strong>width</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-winId"><strong>winId</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-window"><strong>window</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-windowFilePath"><strong>windowFilePath</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-windowFlags"><strong>windowFlags</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-windowIcon"><strong>windowIcon</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-windowIconText"><strong>windowIconText</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-windowModality"><strong>windowModality</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-windowOpacity"><strong>windowOpacity</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-windowRole"><strong>windowRole</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-windowState"><strong>windowState</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-windowTitle"><strong>windowTitle</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-windowType"><strong>windowType</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-x"><strong>x</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-x11Info"><strong>x11Info</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-x11PictureHandle"><strong>x11PictureHandle</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-y"><strong>y</strong></a>(...)</dt></dl>
+
+<hr>
+Static methods inherited from <a href="PySide.QtGui.html#QWidget">PySide.QtGui.QWidget</a>:<br>
+<dl><dt><a name="Bd_Productos-keyboardGrabber"><strong>keyboardGrabber</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-mouseGrabber"><strong>mouseGrabber</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setTabOrder"><strong>setTabOrder</strong></a>(...)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PySide.QtGui.html#QWidget">PySide.QtGui.QWidget</a>:<br>
+<dl><dt><strong>DrawChildren</strong> = PySide.QtGui.QWidget.RenderFlag.DrawChildren</dl>
+
+<dl><dt><strong>DrawWindowBackground</strong> = PySide.QtGui.QWidget.RenderFlag.DrawWindowBackground</dl>
+
+<dl><dt><strong>IgnoreMask</strong> = PySide.QtGui.QWidget.RenderFlag.IgnoreMask</dl>
+
+<dl><dt><strong>RenderFlag</strong> = &lt;type 'PySide.QtGui.QWidget.RenderFlag'&gt;</dl>
+
+<dl><dt><strong>RenderFlags</strong> = &lt;type 'RenderFlags'&gt;</dl>
+
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of Shiboken.ObjectType object&gt;<dd><tt>T.<a href="#Bd_Productos-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;object&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+<dl><dt><strong>customContextMenuRequested</strong> = &lt;PySide.QtCore.Signal object&gt;<dd><tt>Signal</tt></dl>
+
+<hr>
+Methods inherited from <a href="PySide.QtCore.html#QObject">PySide.QtCore.QObject</a>:<br>
+<dl><dt><a name="Bd_Productos-__delattr__"><strong>__delattr__</strong></a>(...)</dt><dd><tt>x.<a href="#Bd_Productos-__delattr__">__delattr__</a>('name')&nbsp;&lt;==&gt;&nbsp;del&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="Bd_Productos-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#Bd_Productos-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="Bd_Productos-__setattr__"><strong>__setattr__</strong></a>(...)</dt><dd><tt>x.<a href="#Bd_Productos-__setattr__">__setattr__</a>('name',&nbsp;value)&nbsp;&lt;==&gt;&nbsp;x.name&nbsp;=&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="Bd_Productos-blockSignals"><strong>blockSignals</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-childEvent"><strong>childEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-children"><strong>children</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-connectNotify"><strong>connectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-customEvent"><strong>customEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-deleteLater"><strong>deleteLater</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-disconnectNotify"><strong>disconnectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-dumpObjectInfo"><strong>dumpObjectInfo</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-dumpObjectTree"><strong>dumpObjectTree</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-dynamicPropertyNames"><strong>dynamicPropertyNames</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-emit"><strong>emit</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-eventFilter"><strong>eventFilter</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-findChild"><strong>findChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-findChildren"><strong>findChildren</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-inherits"><strong>inherits</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-installEventFilter"><strong>installEventFilter</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-isWidgetType"><strong>isWidgetType</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-killTimer"><strong>killTimer</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-metaObject"><strong>metaObject</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-moveToThread"><strong>moveToThread</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-objectName"><strong>objectName</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-parent"><strong>parent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-property"><strong>property</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-receivers"><strong>receivers</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-removeEventFilter"><strong>removeEventFilter</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-sender"><strong>sender</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-senderSignalIndex"><strong>senderSignalIndex</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setObjectName"><strong>setObjectName</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-setProperty"><strong>setProperty</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-signalsBlocked"><strong>signalsBlocked</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-startTimer"><strong>startTimer</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-thread"><strong>thread</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-timerEvent"><strong>timerEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-tr"><strong>tr</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-trUtf8"><strong>trUtf8</strong></a>(...)</dt></dl>
+
+<hr>
+Static methods inherited from <a href="PySide.QtCore.html#QObject">PySide.QtCore.QObject</a>:<br>
+<dl><dt><a name="Bd_Productos-connect"><strong>connect</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-disconnect"><strong>disconnect</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-registerUserData"><strong>registerUserData</strong></a>(...)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PySide.QtCore.html#QObject">PySide.QtCore.QObject</a>:<br>
+<dl><dt><strong>destroyed</strong> = &lt;PySide.QtCore.Signal object&gt;<dd><tt>Signal</tt></dl>
+
+<hr>
+Methods inherited from <a href="PySide.QtGui.html#QPaintDevice">PySide.QtGui.QPaintDevice</a>:<br>
+<dl><dt><a name="Bd_Productos-colorCount"><strong>colorCount</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-depth"><strong>depth</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-heightMM"><strong>heightMM</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-logicalDpiX"><strong>logicalDpiX</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-logicalDpiY"><strong>logicalDpiY</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-numColors"><strong>numColors</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-paintingActive"><strong>paintingActive</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-physicalDpiX"><strong>physicalDpiX</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-physicalDpiY"><strong>physicalDpiY</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="Bd_Productos-widthMM"><strong>widthMM</strong></a>(...)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="PySide.QtGui.html#QPaintDevice">PySide.QtGui.QPaintDevice</a>:<br>
+<dl><dt><strong>painters</strong></dt>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="PySide.QtGui.html#QPaintDevice">PySide.QtGui.QPaintDevice</a>:<br>
+<dl><dt><strong>PaintDeviceMetric</strong> = &lt;type 'PySide.QtGui.QPaintDevice.PaintDeviceMetric'&gt;</dl>
+
+<dl><dt><strong>PdmDepth</strong> = PySide.QtGui.QPaintDevice.PaintDeviceMetric.PdmDepth</dl>
+
+<dl><dt><strong>PdmDpiX</strong> = PySide.QtGui.QPaintDevice.PaintDeviceMetric.PdmDpiX</dl>
+
+<dl><dt><strong>PdmDpiY</strong> = PySide.QtGui.QPaintDevice.PaintDeviceMetric.PdmDpiY</dl>
+
+<dl><dt><strong>PdmHeight</strong> = PySide.QtGui.QPaintDevice.PaintDeviceMetric.PdmHeight</dl>
+
+<dl><dt><strong>PdmHeightMM</strong> = PySide.QtGui.QPaintDevice.PaintDeviceMetric.PdmHeightMM</dl>
+
+<dl><dt><strong>PdmNumColors</strong> = PySide.QtGui.QPaintDevice.PaintDeviceMetric.PdmNumColors</dl>
+
+<dl><dt><strong>PdmPhysicalDpiX</strong> = PySide.QtGui.QPaintDevice.PaintDeviceMetric.PdmPhysicalDpiX</dl>
+
+<dl><dt><strong>PdmPhysicalDpiY</strong> = PySide.QtGui.QPaintDevice.PaintDeviceMetric.PdmPhysicalDpiY</dl>
+
+<dl><dt><strong>PdmWidth</strong> = PySide.QtGui.QPaintDevice.PaintDeviceMetric.PdmWidth</dl>
+
+<dl><dt><strong>PdmWidthMM</strong> = PySide.QtGui.QPaintDevice.PaintDeviceMetric.PdmWidthMM</dl>
+
+<hr>
+Data descriptors inherited from Shiboken.Object:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-run"><strong>run</strong></a>()</dt></dl>
+</td></tr></table>
+</body></html>

@@ -137,7 +137,6 @@ class Bd_Productos(QtGui.QWidget):
                         "Error al eliminar el registro")
                     return False
 
-
     def escuchadores(self):
         self.ui.new_Button.clicked.connect(self.ventana_agregaProducto)
         self.ui.edit_Button.clicked.connect(self.ventana_editaProducto)

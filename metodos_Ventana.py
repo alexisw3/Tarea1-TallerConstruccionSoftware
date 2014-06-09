@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+print "n### Docstrings ###n"
 
 from PySide import QtGui
 
