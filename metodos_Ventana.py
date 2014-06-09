@@ -6,6 +6,7 @@ from PySide import QtGui
 import metodos
 from ventana_Producto import Ui_newWindow
 
+
 #clase para cargar la ventana de productos
 class Form(QtGui.QDialog):
     def __init__(self, parent=None, codigo=None):
@@ -55,6 +56,7 @@ class Form(QtGui.QDialog):
             self.reject()
         else:
             self.ui.mensajes.setText("Hubo un problema al editar el producto")
+
 #metodo para salir
     def cancel(self):
         self.reject()
@@ -64,4 +66,6 @@ class Form(QtGui.QDialog):
         nombre_producto = self.ui.nombre_line.text()
         label_imagen = self.ui.label_6
         label_imagen.setPixmap(nombre_producto)
+
+
 

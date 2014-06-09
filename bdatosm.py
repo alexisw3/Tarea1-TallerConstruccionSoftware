@@ -6,8 +6,7 @@ conn = sqlite3.connect('base_productos.db')
 c = conn.cursor()
 
 #creo tabla marcas
-c.execute("""CREATE TABLE marcas (id_marca integer primary key AUTOINCREMENT,
-                                nombre text, descripcion text, pais text)""")
+c.execute("""CREATE TABLE marcas (id_marca integer primary key AUTOINCREMENT, nombre text, descripcion text, pais text)""")
 
 #creo tabla de productos que va asociada con la de marcas
 #o sea una marca tiene varios productos, relacion 1 marca N productos

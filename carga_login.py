@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from PySide import QtGui, QtCore
+from PySide import QtGui
 from login import Ui_Form
 import sys
 import carga_Productos
 import metodos_login
+
 
 #clase para ver ventana de login
 class Login(QtGui.QWidget):

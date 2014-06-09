@@ -9,6 +9,7 @@ def connect():
     con.row_factory = sqlite3.Row
     return con
 
+
 #obtencion de todos los productos de la base de datos
 def obtener_Productos():
     con = connect()
@@ -20,6 +21,7 @@ def obtener_Productos():
     productos = result.fetchall()
     con.close()
     return productos
+
 
 #obtener un producto de acuerdo a su codigo
 def obt_ProducXCod(codigo):
@@ -46,6 +48,7 @@ def buscar_Producto(word):
     con.close()
     return productos
 
+
 #obtiene las marcas de acuerdo a su id
 def obtener_Marcas():
     con = connect()
@@ -68,6 +71,7 @@ def obt_ProducXMarca(id_marca):
     con.close()
     return productos
 
+
 #elimina un producto de la base de datos
 def eliminar(codigo):
     salida = False
@@ -83,6 +87,7 @@ def eliminar(codigo):
         print "Error:", e.args[0]
     con.close()
     return salida
+
 
 #edita de la base de datos determinado producto
 def editar(entrada, nom, desc, col, prec, marc):
@@ -105,6 +110,7 @@ def editar(entrada, nom, desc, col, prec, marc):
         print "Error:", e.args[0]
     con.close()
     return salida
+
 
 #agrega nuevo producto a la base de datos
 def agregar_nuevo(nombre, descripcion, color, precio, fk_id_marca):

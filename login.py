@@ -9,6 +9,7 @@
 
 from PySide import QtCore, QtGui
 
+
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
@@ -54,9 +55,14 @@ class Ui_Form(object):
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
-        Form.setWindowTitle(QtGui.QApplication.translate("Form", "Login", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_2.setText(QtGui.QApplication.translate("Form", "Usuario:", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_3.setText(QtGui.QApplication.translate("Form", "Clave:", None, QtGui.QApplication.UnicodeUTF8))
-        self.user_in.setText(QtGui.QApplication.translate("Form", "Aceptar", None, QtGui.QApplication.UnicodeUTF8))
-        self.user_out.setText(QtGui.QApplication.translate("Form", "Cancelar", None, QtGui.QApplication.UnicodeUTF8))
+        Form.setWindowTitle(QtGui.QApplication.translate(
+            "Form", "Login", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_2.setText(QtGui.QApplication.translate(
+            "Form", "Usuario:", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_3.setText(QtGui.QApplication.translate(
+            "Form", "Clave:", None, QtGui.QApplication.UnicodeUTF8))
+        self.user_in.setText(QtGui.QApplication.translate(
+            "Form", "Aceptar", None, QtGui.QApplication.UnicodeUTF8))
+        self.user_out.setText(QtGui.QApplication.translate(
+            "Form", "Cancelar", None, QtGui.QApplication.UnicodeUTF8))
 
